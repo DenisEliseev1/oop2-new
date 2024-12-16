@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class GenerateFamily {
 
-    public static Person  Person () {
+    private static Person  Person () {
         String [] arrSName = new String[3];
         arrSName [0] = "Иванов(а)";
         arrSName [1] = "Петров(а)";
@@ -17,11 +17,15 @@ public class GenerateFamily {
         arrName [5] = "Екатерина";
         Random rand = new Random();
         Person personArray = new Person();
+        ArrayList <Integer> ch = new ArrayList<>();
+        ch.add(0);
+        personArray.setNumber(0);
         personArray.setName(arrName [rand.nextInt(5)]);
         personArray.setSurname(arrSName [rand.nextInt(2)]);
         personArray.setAges (rand.nextInt(50));
         personArray.setNameFather (arrName [rand.nextInt(2)]);
         personArray.setNameMother  (arrName [rand.nextInt(2)+3]);
+        personArray.setChild (ch);
         return personArray;
     }
 
@@ -30,7 +34,9 @@ public class GenerateFamily {
         Person pers1 = new Person();
         for (int i = 0; i < 10; i++) {
             pers1 = GenerateFamily.Person();
+            pers1.setNumber (1+i);
             persons.add(pers1);
+            
         }
         return persons;
     }

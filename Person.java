@@ -1,9 +1,35 @@
+import java.util.ArrayList;
+
 public class Person {
+    private int number;
     private String name;
     private String surname;
     private String nameFather;
     private String nameMother;
     private int ages;
+    private ArrayList <Integer> Child;
+   
+    public void addChild (int c){
+        Child.add (c);
+    }
+
+    public void setChild(ArrayList<Integer> child) {
+        Child = child;
+    }
+
+
+    public ArrayList<Integer> getChild() {
+        return Child;
+    }
+
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -45,35 +71,15 @@ public class Person {
         return ages;
     }
 
-    
-    /**
-     * Характеристики объекта
-     * @param name
-     * @param surname
-     * @param nameFather
-     * @param nameMother
-     * @param ages
-     */
-
     public Person() {
-        this.name = name;
-        this.surname = surname;
-        this.nameFather = nameFather;
-        this.nameMother = nameMother;
-        this.ages = ages;
+        //this.Child.add(1);
     }
 
     @Override
     public String toString() {
-        return "- [name=" + name + ", surname=" + surname + ", nameFather=" + nameFather + ", nameMother="
-                + nameMother + ", ages=" + ages + "]";
+        return "- [num=" + number + ", name=" + name + ", surname=" + surname + ", nameFather=" + nameFather
+                + ", nameMother="
+                + nameMother + ", ages=" + ages + ", Child=" + Child + "]";
     }
-   
 
-
-
-    
-
-    
-    
 }
