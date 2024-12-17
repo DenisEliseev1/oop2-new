@@ -23,7 +23,11 @@ public class program {
         FamilyTree.StartCheckChildren(persons);
         for (Person person : persons) {
             System.out.println(person);
+            person.Squeezy(person, new WorkFileStand());
+
         }
+        
+        
        
     }
 

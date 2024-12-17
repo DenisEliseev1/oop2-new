@@ -1,8 +1,7 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public interface WorkFileInterface {
-    void Squeezy (ArrayList<Person> persons);
-
-    void Extract (String puth);
-
+    void Squeezy (Person persons) throws IOException, ClassNotFoundException;
+        
 }

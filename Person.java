@@ -1,6 +1,8 @@
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Person {
+public class Person implements Serializable{
     private int number;
     private String name;
     private String surname;
@@ -80,6 +82,10 @@ public class Person {
         return "- [num=" + number + ", name=" + name + ", surname=" + surname + ", nameFather=" + nameFather
                 + ", nameMother="
                 + nameMother + ", ages=" + ages + ", Child=" + Child + "]";
+    }
+
+    public void Squeezy (Person person, WorkFile File) throws IOException, ClassNotFoundException{
+        File.Squeezy(person);
     }
 
 }
