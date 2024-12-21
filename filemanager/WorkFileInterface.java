@@ -1,5 +1,13 @@
+package filemanager;
+
+
 import java.io.IOException;
-import java.util.ArrayList;
+import modeling.*;
+
+
+
+
+
 
 public interface WorkFileInterface {
     void Squeezy (Person persons) throws IOException, ClassNotFoundException;

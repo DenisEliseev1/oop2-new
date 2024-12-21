@@ -1,5 +1,7 @@
-import java.io.IOException;
-import java.util.ArrayList;
+package filemanager;
+
+import modeling.*;
+
 
 public abstract class WorkFile  implements WorkFileInterface  {
     

@@ -1,3 +1,6 @@
+package modeling;
+
+
 import java.util.ArrayList;
 import java.util.Random;
 

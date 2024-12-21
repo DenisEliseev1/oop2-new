@@ -1,8 +1,13 @@
+package modeling;
+
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Person implements Serializable{
+import filemanager.WorkFile;
+
+public class Person implements Serializable, Comparable <Person> {
     private int number;
     private String name;
     private String surname;
@@ -73,7 +78,7 @@ public class Person implements Serializable{
         return ages;
     }
 
-    public Person() {
+    public Person()  {
         //this.Child.add(1);
     }
 
@@ -86,6 +91,17 @@ public class Person implements Serializable{
 
     public void Squeezy (Person person, WorkFile File) throws IOException, ClassNotFoundException{
         File.Squeezy(person);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (this.ages > o.ages) 
+            return 1;
+            else if  (this.ages < o.ages) 
+                return -1;
+                else 
+                return 0;
+        
     }
 
 }

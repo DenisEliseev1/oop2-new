@@ -1,4 +1,11 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+import modeling.FamilyTree;
+import modeling.GenerateFamily;
+import modeling.Person;
+import filemanager.*;
 
 
 /**
@@ -26,7 +33,10 @@ public class program {
             person.Squeezy(person, new WorkFileStand());
 
         }
-        
+        Collections.sort (persons);
+        for (Person person : persons) {
+            System.out.println(person);
+        }
         
        
     }
