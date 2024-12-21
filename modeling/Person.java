@@ -1,34 +1,31 @@
 package modeling;
 
-
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 import filemanager.WorkFile;
 
-public class Person implements Serializable, Comparable <Person> {
+public class Person implements Serializable, Comparable<Person> {
     private int number;
     private String name;
     private String surname;
     private String nameFather;
     private String nameMother;
     private int ages;
-    private ArrayList <Integer> Child;
-   
-    public void addChild (int c){
-        Child.add (c);
+    private ArrayList<Integer> Child;
+
+    public void addChild(int c) {
+        Child.add(c);
     }
 
     public void setChild(ArrayList<Integer> child) {
         Child = child;
     }
 
-
     public ArrayList<Integer> getChild() {
         return Child;
     }
-
 
     public int getNumber() {
         return number;
@@ -78,8 +75,8 @@ public class Person implements Serializable, Comparable <Person> {
         return ages;
     }
 
-    public Person()  {
-        //this.Child.add(1);
+    public Person() {
+        // this.Child.add(1);
     }
 
     @Override
@@ -89,19 +86,22 @@ public class Person implements Serializable, Comparable <Person> {
                 + nameMother + ", ages=" + ages + ", Child=" + Child + "]";
     }
 
-    public void Squeezy (Person person, WorkFile File) throws IOException, ClassNotFoundException{
+    public void Squeezy(Person person, WorkFile File) throws IOException, ClassNotFoundException {
         File.Squeezy(person);
     }
 
     @Override
     public int compareTo(Person o) {
-        if (this.ages > o.ages) 
+        if (this.ages > o.ages)
             return 1;
-            else if  (this.ages < o.ages) 
-                return -1;
-                else 
-                return 0;
-        
+        else if (this.ages < o.ages)
+            return -1;
+        else
+            return 0;
+
     }
+
+    
+
 
 }

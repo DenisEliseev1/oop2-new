@@ -8,16 +8,6 @@ import modeling.Person;
 import filemanager.*;
 
 
-/**
- * Реализовать, с учетом ооп подхода, приложение. Для проведения исследований с
- * генеалогическим древом.
- * 
- * Идея: описать некоторое количество компонент, например - модель человека и
- * дерева.
- * Под “проведением исследования” можно понимать например получение всех детей
- * выбранного человека.
- */
-
 public class program {
 
     public static void main(String[] args) throws Exception{
@@ -33,12 +23,15 @@ public class program {
             person.Squeezy(person, new WorkFileStand());
 
         }
-        Collections.sort (persons);
+        FamilyTree.sortSurname (persons);
         for (Person person : persons) {
             System.out.println(person);
         }
-        
-       
+        System.out.println();
+       FamilyTree.sortAges (persons);
+       for (Person person : persons) {
+           System.out.println(person);
+       }
     }
 
 }
