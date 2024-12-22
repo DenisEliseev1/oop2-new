@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import filemanager.WorkFile;
 
-public class Person implements Serializable, Comparable<Person> {
+public class Person implements Serializable {
     private int number;
     private String name;
     private String surname;
@@ -90,16 +90,7 @@ public class Person implements Serializable, Comparable<Person> {
         File.Squeezy(person);
     }
 
-    @Override
-    public int compareTo(Person o) {
-        if (this.ages > o.ages)
-            return 1;
-        else if (this.ages < o.ages)
-            return -1;
-        else
-            return 0;
 
-    }
 
     
 

@@ -1,12 +1,13 @@
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-
 import modeling.FamilyTree;
 import modeling.GenerateFamily;
 import modeling.Person;
 import filemanager.*;
 
+/**
+ * Сделать Person абстрактынм и наследовать от него Human  и Dogs
+ * Класс FamilyTree сделать универсальным к выбору классов Human и Dogs
+ */
 
 public class program {
 

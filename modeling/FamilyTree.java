@@ -3,8 +3,7 @@ package modeling;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class FamilyTree {
-    private ArrayList <Person> persons = new ArrayList<>();
+public class FamilyTree  {
     public static ArrayList<Person> StartCheckChildren(ArrayList<Person> pers) {
         int ages;
         String name;
