@@ -17,10 +17,13 @@ public class FamilyTree  {
             // FileWriter file = new FileWriter (name+sName+ages+".txt");
             for (Person person2 : pers) {
                 if ((sName == person2.getSurname())
-                        && ((name == person2.getNameFather()) || (name == person2.getNameMother()))
-                        && ((ages - person2.getAges()) >= 18)) {
+                        && ((name == person2.getNameFather()) || (name == person2.getNameMother()))) {
+                        if (((ages - person2.getAges()) >= 18) && (person2.toString().contains("Human")))
                     person.addChild(person2.getNumber());
-                }
+                    else if (((ages - person2.getAges()) >= 2) && (person2.toString().contains("Dogs")))  
+                        person.addChild(person2.getNumber());
+                
+            }
 
             }
 

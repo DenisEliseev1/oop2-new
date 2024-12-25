@@ -6,15 +6,15 @@ import java.util.ArrayList;
 
 import filemanager.WorkFile;
 
-public class Person implements Serializable {
+public abstract class Person implements Serializable {
     private int number;
     private String name;
-    private String surname;
+    public String surname;
     private String nameFather;
     private String nameMother;
     private int ages;
     private ArrayList<Integer> Child;
-
+    
     public void addChild(int c) {
         Child.add(c);
     }
@@ -90,7 +90,7 @@ public class Person implements Serializable {
         File.Squeezy(person);
     }
 
-
+    
 
     
 
