@@ -4,17 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class FamilyTree  {
-    public static ArrayList<Person> StartCheckChildren(ArrayList<Person> pers) {
+    public static Family<Person> StartCheckChildren(Family<Person> pers) {
         int ages;
         String name;
-        // String nameF;
-        // String nameM;
         String sName;
         for (Person person : pers) {
             name = person.getName();
             ages = person.getAges();
             sName = person.getSurname();
-            // FileWriter file = new FileWriter (name+sName+ages+".txt");
+
             for (Person person2 : pers) {
                 if ((sName == person2.getSurname())
                         && ((name == person2.getNameFather()) || (name == person2.getNameMother()))) {
