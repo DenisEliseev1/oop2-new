@@ -7,10 +7,12 @@ import modeling.FamilyTree;
 import modeling.GenerateFamily;
 import modeling.Person;
 import viewer.Print;
+import viewer.PrintTerminal;
 
 public class Present {
-    public static void ButtonClick() {
-
+    Print pr = new PrintTerminal();
+    Present st  = new Present();
+    public void ButtonClick() {
         System.out.println(
                 "Для выбора объектов FamilyTree вести: \n1- Генеалогическое древо людей \n2 - Родословная собак");
         Scanner in = new Scanner(System.in);
@@ -18,12 +20,13 @@ public class Present {
         Family<Person> persons = GenerateFamily.personList(x);
         in.reset();
         // Print.printTerminal (persons);
-        start(persons);
+        st.Start(persons);
         in.close();
 
     }
 
-    private static void start(Family<Person> persons) {
+    private void Start(Family<Person> persons) {
+        
         Scanner in = new Scanner(System.in);
         int index = 0;
         System.out.println(
@@ -31,15 +34,15 @@ public class Present {
         index = in.nextInt();
         switch (index) {
             case 1:
-                Print.printTerminal(persons);
+
                 in.reset();
-                start(persons);
+                st.Start(persons);
                 break;
             case 2:
                 Family<Person> tree = FamilyTree.StartCheckChildren(persons);
-                Print.printTerminal(tree);
+                pr.print (tree);
                 in.reset();
-                start(persons);
+                st.Start(persons);
                 break;
             case 3:
                 System.out.println("Bye");
@@ -47,7 +50,7 @@ public class Present {
                 break;
             default:
                 in.reset();
-                start(persons);
+                st.Start(persons);
                 break;
         }
     }
